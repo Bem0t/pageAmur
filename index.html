@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="icon" href="./img/another/favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap" rel="stylesheet">
+  <title>Бк Амур</title>
+
+</head>
+
+<body id="body">
+  <div class="wrapper">
+    <header class="header">
+  <div class="container">
+    <div class="header__body">
+      <div class="header__logo">
+        <a href="#" class="header__link ">
+          <img src="img/another/logo.png" alt="Logo" class="header__logo">
+        </a>
+      </div>
+      <div class="header__burger" id="HBurger">
+        <span></span>
+      </div>
+      <nav class="header__menu" id="HMenu">
+        <ul class="header__list">
+          <li>
+            <a href="./index.html" class="header__link active">Главная</a>
+          </li>
+          <li>
+            <a href="./about.html" class="header__link">О баскетболе</a>
+          </li>
+          <li>
+            <a href="./media.html" class="header__link">Медиа</a>
+          </li>
+          <li>
+            <a href="./training-schedule.html" class="header__link">Расписание</a>
+          </li>
+          <li>
+            <a href="./team.html" class="header__link">Команда</a>
+          </li>
+          <li>
+            <a href="./contacts.html" class="header__link">Контакты</a>
+          </li>
+          <li>
+            <a href="./payment.html" class="header__link">Оплата</a>
+          </li>
+          <li>
+            <a href="./camp.html" class="header__link">Лагерь</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+    <main class="main">
+      <!--Главный экран  -->
+      <section class="amur-club">
+        <div class="amur-club__body body">
+          <div class="body-about">
+            <div class="body-about__lable">
+              <h2>Баскетбольный клуб</h2>
+            </div>
+            <div class="body-about__title">
+              <h1>Амур</h1>
+            </div>
+          </div>
+          <!--Первая тренирка + popup menu для записи  -->
+
+        </div>
+      </section>
+      <!-- ------------------------------------------------------ -->
+      <!-- Переделать под flex чтобы разместить на половине и в центре -->
+      <section class="first-training">
+        <div class="first-training__body">
+          <div class="first-training__entry entry">
+            <div class="entry__title">
+              <h2>Тренировки по баскетболу с 12 до 18 лет.</h2>
+            </div>
+            <div class="entry__text">
+              Запишитесь на бесплатное пробное занятие
+            </div>
+            <div class="button entry__btn x__link" id="popup__link">Записаться на пробное занятие</div>
+          </div>
+        </div>
+      </section>
+      <!--PopUps  -->
+      <div class="popup" id="popup">
+        <div class="popup__body">
+          <div class="popup__content">
+            <div class="popup__close x__link" id="Close__1">X</div>
+            <div class="popup__title">
+              Наше расписание:
+            </div>
+            <div class="popup__subtitle">
+              <ul class="young-group group">
+                <li>Младшая группа:</li>
+                <li>Вторник 16:30-18:00</li>
+                <li>Четверг 16:30-18:00</li>
+                <li>Суббота 16:00-17:30</li>
+              </ul>
+              <ul class="senior-group group">
+                <li>Старшая группа:</li>
+                <li>Среда 17:00-18:30</li>
+                <li>Пятница 17:00-18:30</li>
+                <li>Суббота 16:00-17:30</li>
+              </ul>
+            </div>
+            <div class="button popup__btn" id="btn__1">Далее</div>
+          </div>
+        </div>
+      </div>
+      <div class="popup" id="popup__map">
+        <div class="popup__body">
+          <div class="popup__content popup__map">
+            <div class="popup__close x__link" id="Close__2">X</div>
+            <div class="popup__title">
+              Мы на карте:
+            </div>
+            <div class="popup__map">
+              <iframe
+                src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab5ed4dad3d52d367425f19ecdcb927c79eed6d8c3bf4b0b58a62d296c4e4beec&amp;source=constructor"
+                width="100%" height="240" frameborder="0"></iframe>
+            </div>
+            <div class="button popup__btn" id="btn__2">Далее</div>
+          </div>
+        </div>
+      </div>
+      <div class="popup" id="popup__conneсt">
+        <div class="popup__body">
+          <div class="popup__content">
+            <div class="popup__close x__link" id="Close__3">X</div>
+            <div class="popup__title" align="center">
+              Свяжитесь с тренером
+            </div>
+            <div class="popup__subtitle" align="center">
+              Позвоните по номеру телефона +7 914 195-46-87
+              или напишите в WhatsApp
+            </div>
+            <a
+              href="https://api.whatsapp.com/send?phone=79141954687&text=%D0%94%D0%BE%D0%B1%D1%80%D1%8B%D0%B9%20%D0%B4%D0%B5%D0%BD%D1%8C">
+              <div class="button popup__btn" id="btn__3">Написать</div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- ------------------------------------------------------ -->
+      <!--? Зал славы где будут игроки -->
+    </main>
+    <footer class="footer">
+</footer>
+  </div>
+  <script src="js/app.min.js"></script>
+</body>
+
+</html>
