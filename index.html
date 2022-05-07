@@ -4,21 +4,21 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/style.min.css?_v=20220507222010">
   <link rel="icon" href="./img/another/favicon.ico" type="image/x-icon">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap&_v=20220507222010" rel="stylesheet">
   <title>Бк Амур</title>
 
 </head>
 
 <body id="body">
-  <div class="wrapper">
-    <header class="header">
+  <div class="wrapper ">
+    <header class="header lock-padding" id="header">
   <div class="container">
     <div class="header__body">
       <div class="header__logo">
-        <a href="#" class="header__link ">
-          <img src="img/another/logo.png" alt="Logo" class="header__logo">
+        <a href="./index.html" class="header__link ">
+          <picture><source srcset="img/another/logo.webp" type="image/webp"><img src="img/another/logo.png" alt="Logo" class="header__logo"></picture>
         </a>
       </div>
       <div class="header__burger" id="HBurger">
@@ -82,15 +82,17 @@
             <div class="entry__text">
               Запишитесь на бесплатное пробное занятие
             </div>
-            <div class="button entry__btn x__link" id="popup__link">Записаться на пробное занятие</div>
+            <a href="#popup__activity" class="popup__link">
+              <div class="button entry__btn ">Записаться на пробное занятие</div>
+            </a>
           </div>
         </div>
       </section>
       <!--PopUps  -->
-      <div class="popup" id="popup">
+      <div class="popup" id="popup__activity">
         <div class="popup__body">
           <div class="popup__content">
-            <div class="popup__close x__link" id="Close__1">X</div>
+            <a href="##" class="popup__close">X</a>
             <div class="popup__title">
               Наше расписание:
             </div>
@@ -108,14 +110,16 @@
                 <li>Суббота 16:00-17:30</li>
               </ul>
             </div>
-            <div class="button popup__btn" id="btn__1">Далее</div>
+            <a href="#popup__map" class="popup__link">
+              <div class="button popup__btn">Далее</div>
+            </a>
           </div>
         </div>
       </div>
       <div class="popup" id="popup__map">
         <div class="popup__body">
           <div class="popup__content popup__map">
-            <div class="popup__close x__link" id="Close__2">X</div>
+            <a href="##" class="popup__close">X</a>
             <div class="popup__title">
               Мы на карте:
             </div>
@@ -124,14 +128,16 @@
                 src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab5ed4dad3d52d367425f19ecdcb927c79eed6d8c3bf4b0b58a62d296c4e4beec&amp;source=constructor"
                 width="100%" height="240" frameborder="0"></iframe>
             </div>
-            <div class="button popup__btn" id="btn__2">Далее</div>
+            <a href="#popup__conneсt" class="popup__link">
+              <div class="button popup__btn">Далее</div>
+            </a>
           </div>
         </div>
       </div>
       <div class="popup" id="popup__conneсt">
         <div class="popup__body">
           <div class="popup__content">
-            <div class="popup__close x__link" id="Close__3">X</div>
+            <a href="##" class="popup__close">X</a>
             <div class="popup__title" align="center">
               Свяжитесь с тренером
             </div>
@@ -139,9 +145,9 @@
               Позвоните по номеру телефона +7 914 195-46-87
               или напишите в WhatsApp
             </div>
-            <a
+            <a target="_blank"
               href="https://api.whatsapp.com/send?phone=79141954687&text=%D0%94%D0%BE%D0%B1%D1%80%D1%8B%D0%B9%20%D0%B4%D0%B5%D0%BD%D1%8C">
-              <div class="button popup__btn" id="btn__3">Написать</div>
+              <div class="button popup__btn">Написать</div>
             </a>
           </div>
         </div>
@@ -152,7 +158,7 @@
     <footer class="footer">
 </footer>
   </div>
-  <script src="js/app.min.js"></script>
+  <script src="js/app.min.js?_v=20220507222010"></script>
 </body>
 
 </html>
