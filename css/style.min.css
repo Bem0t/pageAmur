@@ -110,6 +110,14 @@ h6 {
   padding-bottom: 30px;
   max-width: 1170px;
   margin: 0px auto;
+  height: 100%;
+}
+@media screen and (max-width: 991px) {
+  [class*=__container] {
+    /* стили для больших планшетов - начало */
+    padding-top: 69px;
+    padding-bottom: 10px;
+  }
 }
 
 body {
@@ -119,7 +127,7 @@ body {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   width: 100%;
-  height: 100vh;
+  height: 100%;
 }
 @media screen and (max-width: 479px) {
   body {
@@ -186,6 +194,58 @@ body {
 }
 
 /*--------------------*/
+.link {
+  color: rgb(236, 94, 11);
+  transition: ease 0.7s;
+}
+.link:hover, .link:active {
+  text-decoration: underline;
+  text-decoration-color: rgb(236, 94, 11);
+  text-underline-offset: 3px;
+  text-decoration-thickness: 2px;
+}
+
+[data-tooltip] {
+  position: relative;
+  /* Относительное позиционирование */
+}
+
+[data-tooltip]::after {
+  content: attr(data-tooltip);
+  /* Выводим текст */
+  position: absolute;
+  /* Абсолютное позиционирование */
+  left: -150%;
+  top: 0%;
+  /* Положение подсказки */
+  background: rgba(10, 25, 30, 0.6);
+  /* Синий цвет фона */
+  color: #fff;
+  /* Цвет текста */
+  pointer-events: none;
+  /* Подсказка */
+  opacity: 0;
+  /* Подсказка невидима */
+  transition: 1s;
+  /* Время появления подсказки */
+  padding: 10px;
+  white-space: nowrap;
+  border-radius: 10px;
+}
+@media screen and (max-width: 479px) {
+  [data-tooltip]::after {
+    /* стили для телефонов - начало */
+    left: -60%;
+  }
+}
+
+[data-tooltip]:hover::after {
+  opacity: 1;
+  /* Показываем подсказку */
+  top: 2em;
+  /* Положение подсказки */
+}
+
 .title {
   text-transform: uppercase;
   font-size: 40px;
@@ -269,7 +329,6 @@ body {
   align-items: center;
 }
 .popup__map iframe {
-  max-width: 600px;
   margin: 0px auto;
   display: none;
 }
@@ -300,11 +359,11 @@ body {
 @media screen and (max-width: 479px) {
   .popup__title {
     /* стили для телефонов - начало */
-    font-size: 30px;
+    font-size: 22px;
   }
 }
 .popup__subtitle {
-  font-size: 22px;
+  font-size: 16px;
   margin-bottom: 15px;
 }
 
@@ -344,17 +403,11 @@ body {
   width: 145px;
 }
 
-.group {
-  position: relative;
-}
-
-.group li:not(:first-child)::after {
+.group li:not(:first-child)::before {
   content: "";
-  position: absolute;
-  background: url("../img/First-training/clock.svg") 0 0/cover no-repeat;
-  left: -30px;
-  width: 20px;
-  height: 20px;
+  background: url("../img/First-training/clock.svg") center left/contain no-repeat;
+  padding: 15px 0px 15px 20px;
+  margin-right: 5px;
 }
 
 body.lock {
@@ -688,13 +741,7 @@ body.lock {
 .payment {
   color: #fff;
   margin: 0px 15px;
-}
-@media (min-width: 1000px) {
-  .payment {
-    display: flex;
-    align-items: center;
-    height: 100vh;
-  }
+  height: 100%;
 }
 .payment__body {
   padding: 20px 0px;
@@ -704,12 +751,25 @@ body.lock {
   justify-content: center;
   align-items: center;
   margin: 0px auto;
-  background-color: rgba(50, 50, 50, 0.5);
+  background-color: rgba(50, 50, 50, 0.8);
   border-radius: 10px;
 }
-@media (min-width: 1000px) {
-  .payment__body {
-    height: 80vh;
+.payment__content {
+  padding: 40px 0px;
+  display: flex;
+  align-items: center;
+  flex: 1 1 auto;
+}
+@media screen and (max-width: 479px) {
+  .payment__content {
+    /* стили для телефонов - начало */
+    padding: 0px 0px;
+  }
+}
+@media screen and (max-height: 650px) {
+  .payment__content {
+    /* стили для телефонов - начало */
+    padding: 0px 0px;
   }
 }
 .payment__row {
@@ -724,16 +784,14 @@ body.lock {
     flex-direction: column;
   }
 }
-.payment__link {
-  color: rgb(236, 94, 11);
-  transition: ease 0.7s;
-  font-size: 20px;
+@media screen and (max-width: 479px) {
+  .payment__row {
+    /* стили для телефонов - начало */
+    padding: 0px 0px;
+  }
 }
-.payment__link:hover, .payment__link:active {
-  text-decoration: underline;
-  text-decoration-color: rgb(236, 94, 11);
-  text-underline-offset: 3px;
-  text-decoration-thickness: 2px;
+.payment__link {
+  font-size: 20px;
 }
 @media screen and (max-width: 400px) {
   .payment__link {
@@ -754,8 +812,10 @@ body.lock {
   }
 }
 .payment .row__card {
+  display: flex;
   flex: 0 0 50%;
   padding: 0px 20px;
+  justify-content: center;
 }
 .payment .text__title {
   text-align: center;
@@ -971,28 +1031,26 @@ body.lock {
 .schedule {
   color: #fff;
   margin: 0px 15px;
-}
-@media (min-width: 1000px) {
-  .schedule {
-    display: flex;
-    align-items: center;
-    height: 100vh;
-  }
+  height: 100%;
 }
 .schedule__body {
-  padding: 40px 40px;
+  padding: 0px 0px;
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
   margin: 0px auto;
-  background-color: rgba(50, 50, 50, 0.88);
+  background-color: rgba(50, 50, 50, 0.8);
   border-radius: 10px;
 }
-@media (min-width: 1000px) {
-  .schedule__body {
-    height: 100%;
-  }
+.schedule__content {
+  display: flex;
+  align-items: center;
+  flex: 1 1 auto;
+  flex-direction: column;
+  font-size: 22px;
+  padding: 10px 10px 0px 10px;
 }
 .schedule__title h2 {
   text-align: center;
@@ -1000,19 +1058,16 @@ body.lock {
 @media screen and (max-width: 479px) {
   .schedule__title h2 {
     /* стили для телефонов - начало */
-    font-size: 32px;
-    line-height: 1.3em;
+    font-size: 22px;
+    line-height: 1.5em;
   }
 }
-.schedule__content {
-  font-size: 22px;
-  padding: 20px;
-}
 .schedule__row {
-  margin-top: 30px;
+  margin-top: 15px;
   display: flex;
   flex-wrap: wrap;
-  gap: 60px;
+  flex-direction: column;
+  gap: 10px;
   justify-content: center;
   align-items: center;
   letter-spacing: 2px;
@@ -1023,12 +1078,14 @@ body.lock {
     /* стили для телефонов - начало */
     font-size: 18px;
     gap: 0;
+    margin-top: 10px;
   }
 }
 @media screen and (max-width: 767px) {
   .schedule__row {
     /* стили для средних планшетов - начало */
     gap: 0;
+    margin-top: 10px;
   }
 }
 
@@ -1076,3 +1133,154 @@ body.lock {
 }
 
 /*--------------------*/
+.contacts {
+  color: #fff;
+}
+.contacts__body {
+  background-color: rgba(50, 50, 50, 0.87);
+  border-radius: 10px;
+  margin: 0px 20px;
+}
+.contacts__content {
+  padding: 20px;
+}
+.contacts__row {
+  display: flex;
+  flex-direction: row;
+}
+@media screen and (max-width: 991px) {
+  .contacts__row {
+    /* стили для больших планшетов - начало */
+    flex-direction: column;
+  }
+}
+.contacts__text {
+  flex: 1 1 50%;
+  padding-right: 10px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.contacts__text-title {
+  margin-bottom: 10px;
+}
+.contacts__text-title h2 {
+  font-size: 30px;
+}
+@media screen and (max-width: 479px) {
+  .contacts__text-title h2 {
+    /* стили для телефонов - начало */
+    font-size: 22px;
+  }
+}
+.contacts__text-schedule {
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+@media screen and (max-width: 479px) {
+  .contacts__text-schedule {
+    /* стили для телефонов - начало */
+    font-size: 18px;
+  }
+}
+.contacts__text-text {
+  margin-bottom: 10px;
+  line-height: 1.2em;
+  text-align: center;
+}
+@media screen and (max-width: 479px) {
+  .contacts__text-text {
+    /* стили для телефонов - начало */
+    font-size: 16px;
+    font-weight: normal;
+  }
+}
+.contacts__text-phone {
+  margin-bottom: 10px;
+}
+.contacts__map {
+  flex: 1 1 50%;
+}
+@media screen and (max-width: 991px) {
+  .contacts__map {
+    /* стили для больших планшетов - начало */
+    flex: 1 1 100%;
+  }
+}
+.contacts .popup__map {
+  margin: 0px;
+}
+.contacts iframe {
+  margin: 0px;
+  border-radius: 10px;
+  height: 400px;
+}
+@media screen and (max-width: 479px) {
+  .contacts iframe {
+    /* стили для телефонов - начало */
+    height: 240px;
+  }
+}
+
+.social-img {
+  display: inline-block;
+}
+.social-img a img {
+  width: 100%;
+  height: 60px;
+}
+
+/*--------------------*/
+.basketball-team-gallery {
+  background: url("../img/gallery/background.png") top center repeat;
+  position: relative;
+}
+
+.basketball-team__container {
+  padding: 20px;
+}
+.basketball-team__content {
+  background: url("../img/gallery/field.png");
+  padding: 30px;
+  margin-top: -40px;
+}
+
+.gallery__slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider-card__column {
+  padding: 0px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-photo img {
+  object-fit: cover;
+}
+
+.card-text__row {
+  display: flex;
+  margin-top: 10px;
+}
+.card-text__number {
+  font-size: 57px;
+  color: rgb(236, 94, 11);
+}
+.card-text__column {
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.card-text__info {
+  font-size: 14px;
+  color: #999999;
+}
+.card-text__name {
+  color: #fff;
+  font-size: 22px;
+}
