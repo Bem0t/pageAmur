@@ -214,57 +214,21 @@ body {
   text-decoration-thickness: 2px;
 }
 
-[data-tooltip] {
-  position: relative;
-  /* Относительное позиционирование */
-}
-
-[data-tooltip]::after {
-  content: attr(data-tooltip);
-  /* Выводим текст */
-  position: absolute;
-  /* Абсолютное позиционирование */
-  left: -150%;
-  top: 0%;
-  /* Положение подсказки */
-  background: rgba(10, 25, 30, 0.6);
-  /* Синий цвет фона */
-  color: #fff;
-  /* Цвет текста */
-  pointer-events: none;
-  /* Подсказка */
-  opacity: 0;
-  /* Подсказка невидима */
-  transition: 1s;
-  /* Время появления подсказки */
-  padding: 10px;
-  white-space: nowrap;
-  border-radius: 10px;
-}
-@media screen and (max-width: 479px) {
-  [data-tooltip]::after {
-    /* стили для телефонов - начало */
-    left: -60%;
-  }
-}
-
-[data-tooltip]:hover::after {
-  opacity: 1;
-  /* Показываем подсказку */
-  top: 2em;
-  /* Положение подсказки */
-}
-
 .title {
   text-transform: uppercase;
   font-size: 40px;
   font-weight: bold;
   color: rgb(236, 94, 11);
-  text-decoration: underline;
-  text-decoration-color: rgb(236, 94, 11);
-  text-underline-offset: 5px;
+  /*text-decoration: underline;
+  text-decoration-color: $orange;
+  text-underline-offset: 10px;
   text-decoration-thickness: 3px;
   line-height: 1.2;
+  @media screen and (max-width: 479px) {
+  	font-size: 30px;
+  	text-underline-offset: 6px;
+  	text-decoration-thickness: 2px;
+  }*/
 }
 
 .list {
@@ -576,7 +540,7 @@ body.lock {
   background-repeat: no-repeat;
   background-size: cover;
   color: #fff;
-  padding: 50px 0px 130px 0px;
+  padding: 50px 0px 95px 0px;
 }
 @media screen and (max-width: 991px) {
   .first-training__body {
@@ -784,40 +748,33 @@ body.lock {
 }
 
 /*#endregion*/
-/* -------------------------------------------------------------- */
+/* ------------------------------------------------ */
 /*#region*/
-.payment {
-  color: #fff;
-  margin: 0px 15px;
-  height: 100%;
-}
 .payment__body {
-  padding: 20px 0px;
-  width: 100%;
+  color: #fff;
   height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0px auto;
   background-color: rgba(50, 50, 50, 0.8);
   border-radius: 10px;
+  margin: 0px 20px;
 }
 .payment__content {
   padding: 40px 0px;
   display: flex;
   align-items: center;
   flex: 1 1 auto;
+  flex-direction: column;
+  font-size: 22px;
 }
 @media screen and (max-width: 479px) {
   .payment__content {
     /* стили для телефонов - начало */
-    padding: 0px 0px;
+    padding: 20px 0px;
   }
 }
 @media screen and (max-height: 650px) {
   .payment__content {
     /* стили для телефонов - начало */
-    padding: 0px 0px;
+    padding: 20px 0px;
   }
 }
 .payment__row {
@@ -865,25 +822,27 @@ body.lock {
   padding: 0px 20px;
   justify-content: center;
 }
-.payment .text__title {
+
+.text__title {
   text-align: center;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 @media screen and (max-width: 1200.98px) {
-  .payment .text__title {
+  .text__title {
     font-size: 22px;
   }
 }
-.payment .text__subtitle {
+.text__subtitle {
   font-size: 20px;
   line-height: 1.3em;
   text-align: center;
+  margin-bottom: 20px;
 }
 @media screen and (max-width: 400px) {
-  .payment .text {
+  .text {
     /* стили для телефонов - начало */
   }
-  .payment .text__subtitle {
+  .text__subtitle {
     font-size: 18px;
   }
 }
@@ -1079,21 +1038,13 @@ body.lock {
 /*#endregion*/
 /*--------------------*/
 /*#region*/
-.schedule {
-  color: #fff;
-  margin: 0px 15px;
-  height: 100%;
-}
 .schedule__body {
-  padding: 0px 0px;
-  width: 100%;
+  color: #fff;
   height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0px auto;
+  padding: 0px 0px;
   background-color: rgba(50, 50, 50, 0.8);
   border-radius: 10px;
+  margin: 0px 20px;
 }
 .schedule__content {
   display: flex;
@@ -1155,7 +1106,7 @@ body.lock {
 }
 .about__title {
   text-align: center;
-  margin: 20px 0px -60px 0px;
+  margin: 20px 0px -6% 0px;
 }
 @media screen and (max-width: 479px) {
   .about__title {
@@ -1188,100 +1139,107 @@ body.lock {
 /*#endregion*/
 /*--------------------*/
 /*#region*/
-.contacts {
-  color: #fff;
-}
 .contacts__body {
-  background-color: rgba(50, 50, 50, 0.87);
+  color: #fff;
+  background-color: rgba(50, 50, 50, 0.8);
   border-radius: 10px;
-  margin: 0px 20px;
+  margin: 0 20px;
 }
 .contacts__content {
-  padding: 20px;
+  padding: 10px 20px;
+}
+.contacts__title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 479px) {
+  .contacts__title {
+    /* стили для телефонов - начало */
+    margin-bottom: 10px;
+  }
 }
 .contacts__row {
   display: flex;
-  flex-direction: row;
 }
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 479px) {
   .contacts__row {
-    /* стили для больших планшетов - начало */
+    /* стили для телефонов - начало */
     flex-direction: column;
+    gap: 30px;
   }
 }
-.contacts__text {
-  flex: 1 1 50%;
-  padding-right: 10px;
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.contacts__text-title {
-  margin-bottom: 10px;
-}
-.contacts__text-title h2 {
-  font-size: 30px;
-}
-@media screen and (max-width: 479px) {
-  .contacts__text-title h2 {
-    /* стили для телефонов - начало */
-    font-size: 22px;
-  }
-}
-.contacts__text-schedule {
-  margin-bottom: 10px;
-  font-size: 22px;
-}
-@media screen and (max-width: 479px) {
-  .contacts__text-schedule {
-    /* стили для телефонов - начало */
-    font-size: 18px;
-  }
-}
-.contacts__text-text {
-  margin-bottom: 10px;
-  line-height: 1.2em;
+.contacts__row-block {
+  flex: 1 1 33.333%;
   text-align: center;
 }
+.contacts__row-block:last-child h2 {
+  font-size: 34px;
+}
 @media screen and (max-width: 479px) {
-  .contacts__text-text {
+  .contacts__row-block:last-child h2 {
     /* стили для телефонов - начало */
-    font-size: 16px;
-    font-weight: normal;
+    font-size: 24px;
   }
 }
-.contacts__text-phone {
+.contacts__row-block li:first-child {
   margin-bottom: 10px;
-}
-.contacts__map {
-  flex: 1 1 50%;
-}
-@media screen and (max-width: 991px) {
-  .contacts__map {
-    /* стили для больших планшетов - начало */
-    flex: 1 1 100%;
-  }
-}
-.contacts .popup__map {
-  margin: 0px;
-}
-.contacts iframe {
-  margin: 0px;
-  border-radius: 10px;
-  height: 400px;
+  font-weight: bold;
+  font-size: 34px;
 }
 @media screen and (max-width: 479px) {
-  .contacts iframe {
+  .contacts__row-block li:first-child {
     /* стили для телефонов - начало */
-    height: 240px;
+    font-size: 24px;
+  }
+}
+.contacts__row-block .address li:not(:first-child)::before {
+  padding-right: 10px;
+  font-size: 24px;
+  content: "🏠";
+}
+@media screen and (max-width: 479px) {
+  .contacts__row-block .address li:not(:first-child)::before {
+    /* стили для телефонов - начало */
+    font-size: 20px;
+    padding-right: 5px;
+  }
+}
+.contacts__row-block .phone li:not(:first-child)::before {
+  padding-right: 10px;
+  font-size: 24px;
+  content: "📱";
+}
+@media screen and (max-width: 479px) {
+  .contacts__row-block .phone li:not(:first-child)::before {
+    /* стили для телефонов - начало */
+    font-size: 20px;
+    padding-right: 5px;
   }
 }
 
-.social-img {
-  display: inline-block;
+.rules-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-.social-img a img {
+.rules-links a {
+  margin-top: 10px;
+}
+.rules-links a .button {
+  font-size: 14px;
+  text-align: center;
+}
+
+.social-img__row {
+  display: flex;
+  justify-content: center;
+}
+
+.social-img:not(:last-child) {
+  margin-right: 20px;
+}
+.social-img img {
   width: 100%;
   height: 60px;
 }
@@ -1298,7 +1256,7 @@ body.lock {
   padding: 20px;
 }
 .basketball-team__content {
-  background: url("../img/gallery/field.png") 0 0/cover no-repeat;
+  background: url("../img/gallery/field.png") center center/cover no-repeat;
   padding: 30px;
   margin-top: -40px;
 }
@@ -1527,3 +1485,143 @@ body.lock {
 }*/
 /*#endregion*/
 /*--------------------*/
+/*#region*/
+button {
+  cursor: pointer;
+}
+
+#tab-title-dimensions_tab {
+  font-size: 24px;
+}
+
+.faq,
+.wc-accordion {
+  color: #fff;
+  margin-top: 25px;
+  /* Style the accordion panel. Note: hidden by default */
+}
+.faq .accordion,
+.wc-accordion .accordion {
+  padding: 30px 0px 5px 0px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  border-radius: 0px;
+  background: none;
+  display: flex;
+  border-top: 2px solid #e8f1ef;
+  font-size: 1.25rem;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+}
+.faq .active,
+.faq .accordion:hover,
+.wc-accordion .active,
+.wc-accordion .accordion:hover {
+  background-color: none;
+}
+.faq .accordion:focus,
+.wc-accordion .accordion:focus {
+  text-decoration: underline;
+}
+.faq .active i,
+.wc-accordion .active i {
+  transform: rotate(90deg);
+}
+.faq .panel,
+.wc-accordion .panel {
+  max-height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  transition-duration: 400ms;
+  transition-property: max-height, visibility;
+  transition-delay: 0, 400ms;
+}
+
+.panel.open {
+  visibility: visible;
+  transition-duration: 400ms;
+  transition-property: max-height, visibility;
+  transition-delay: 400ms, 0;
+}
+.panel.open p {
+  font-size: 18px;
+}
+
+.closed .vertical {
+  transition: all 0.4s ease-in-out;
+  transform: rotate(-90deg);
+}
+.closed .horizontal {
+  transition: all 0.4s ease-in-out;
+  transform: rotate(-90deg);
+  opacity: 1;
+}
+
+.active {
+  opacity: 1;
+}
+.active .vertical {
+  transition: all 0.4s ease-in-out;
+  transform: rotate(90deg);
+}
+.active .horizontal {
+  transition: all 0.4s ease-in-out;
+  transform: rotate(90deg);
+  opacity: 0;
+}
+
+.circle-animation {
+  position: relative;
+  flex: 0 0 30px;
+}
+
+.circle-animation .horizontal {
+  position: absolute;
+  background-color: #00a97f;
+  width: 20px;
+  height: 3px;
+  left: 50%;
+  margin-left: -10px;
+  top: 50%;
+  margin-top: -1px;
+}
+
+.circle-animation .vertical {
+  position: absolute;
+  background-color: #00a97f;
+  width: 3px;
+  height: 20px;
+  left: 50%;
+  margin-left: -1px;
+  top: 50%;
+  margin-top: -10px;
+}
+
+.questions__container {
+  padding: 0 20px;
+  margin: 20px auto;
+}
+.questions__body {
+  background-color: rgba(50, 50, 50, 0.87);
+  border-radius: 10px;
+}
+.questions__content {
+  padding: 0px 20px 30px 20px;
+}
+
+.questions-title {
+  padding: 10px 0px;
+  text-align: center;
+}
+
+.questions-subtitle {
+  text-align: center;
+  color: #fff;
+  font-size: 24px;
+}
+
+/*#endregion*/
