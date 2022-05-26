@@ -1925,7 +1925,7 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0px 20px;
+  padding: 0px 20px 0px 20px;
 }
 .we-trainer__row-text p {
   padding: 10px 0px 0px 0px;
@@ -2159,6 +2159,37 @@ button {
 
 a[data-fancybox] img {
   cursor: zoom-in;
+}
+
+/* #endregion */
+/* #region */
+.team__body {
+  color: #fff;
+  background-color: rgb(51, 51, 54);
+  border-radius: 10px;
+  margin: 0 20px;
+}
+.team__body .basketball-team-gallery {
+  margin-top: 100px;
+}
+@media screen and (max-width: 479px) {
+  .team__body .basketball-team-gallery {
+    /* стили для телефонов - начало */
+    margin-top: 50px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .team__body .basketball-team-gallery {
+    /* стили для телефонов - начало */
+    margin-top: 0px;
+  }
+}
+.team__content {
+  padding: 10px 20px;
+}
+.team__title {
+  text-align: center;
+  margin-bottom: 10px;
 }
 
 /* #endregion */
