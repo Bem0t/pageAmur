@@ -589,21 +589,19 @@ body.lock {
 
 /*#region*/
 
+.webp .first-training__body {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .no-webp .first-training__body{
-  background: -webkit-gradient(linear, left top, right top, color-stop(22%, rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0))), url("../img/First-training/headImg.png");
-  background: -o-linear-gradient(left, rgba(0, 0, 0, 0.7) 22%, rgba(0, 0, 0, 0) 100%), url("../img/First-training/headImg.png");
-  background: linear-gradient(90deg, rgba(0, 0, 0, 0.7) 22%, rgba(0, 0, 0, 0) 100%), url("../img/First-training/headImg.png"); }
+  background: -webkit-gradient(linear, left top, right top, color-stop(22%, rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0))), url("../img/First-training/headImg.png") 0 0/cover no-repeat;
+  background: -o-linear-gradient(left, rgba(0, 0, 0, 0.7) 22%, rgba(0, 0, 0, 0) 100%), url("../img/First-training/headImg.png") 0 0/cover no-repeat;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.7) 22%, rgba(0, 0, 0, 0) 100%), url("../img/First-training/headImg.png") 0 0/cover no-repeat; }
 
 .first-training__body {
   color: #fff;
-  background-repeat: no-repeat;
-  background-size: cover;
   padding: 75px 0px 75px 0px;
-}
-
-.first-training__body .webp .first-training__body {
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .entry {
@@ -2850,7 +2848,7 @@ button {
 
 .webp .amur-club{ background-image: url(../img/Home/top_bg.webp); }
 
-.webp .first-training__body{ background: -webkit-gradient(linear, left top, right top, color-stop(22%, rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0))), url(../img/First-training/headImg.webp); background: -o-linear-gradient(left, rgba(0, 0, 0, 0.7) 22%, rgba(0, 0, 0, 0) 100%), url(../img/First-training/headImg.webp); background: linear-gradient(90deg, rgba(0, 0, 0, 0.7) 22%, rgba(0, 0, 0, 0) 100%), url(../img/First-training/headImg.webp); }
+.webp .first-training__body{ background: -webkit-gradient(linear, left top, right top, color-stop(22%, rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0))), url(../img/First-training/headImg.webp) 0 0/cover no-repeat; background: -o-linear-gradient(left, rgba(0, 0, 0, 0.7) 22%, rgba(0, 0, 0, 0) 100%), url(../img/First-training/headImg.webp) 0 0/cover no-repeat; background: linear-gradient(90deg, rgba(0, 0, 0, 0.7) 22%, rgba(0, 0, 0, 0) 100%), url(../img/First-training/headImg.webp) 0 0/cover no-repeat; }
 
 .webp .basketball-team-gallery{ background: url(../img/gallery/background.webp) top center repeat; }
 
