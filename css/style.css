@@ -125,11 +125,14 @@ h6 {
 /* ограничивающий контейнер */
 
 [class*=__container] {
-  padding-top: 109px;
-  padding-bottom: 30px;
   max-width: 1170px;
   margin: 0px auto;
   height: 100%;
+}
+
+[class*=__container].topPad {
+  padding-top: 109px;
+  padding-bottom: 30px;
 }
 
 body {
@@ -592,10 +595,15 @@ body.lock {
   background: linear-gradient(90deg, rgba(0, 0, 0, 0.7) 22%, rgba(0, 0, 0, 0) 100%), url("../img/First-training/headImg.png"); }
 
 .first-training__body {
+  color: #fff;
   background-repeat: no-repeat;
   background-size: cover;
-  color: #fff;
-  padding: 50px 0px 95px 0px;
+  padding: 75px 0px 75px 0px;
+}
+
+.first-training__body .webp .first-training__body {
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .entry {
@@ -715,7 +723,7 @@ body.lock {
 
 /*#endregion*/
 
-/* ------------------------------------------------ */
+/* ---------------- */
 
 /*#region*/
 
@@ -1088,6 +1096,10 @@ body.lock {
 }
 
 .about__title h1 {
+  margin: -20px 0px -6% 0px;
+}
+
+.about__title h1 {
   font-weight: bold;
 }
 
@@ -1131,6 +1143,10 @@ body.lock {
 
 .contacts__content {
   padding: 10px 20px;
+}
+
+.contacts__content .popup__map img {
+  max-width: 90%;
 }
 
 .contacts__title {
@@ -1234,14 +1250,13 @@ body.lock {
   background: url("../img/gallery/field.png") center center/cover no-repeat; }
 
 .basketball-team__content {
-  padding: 30px;
-  margin-top: -40px;
+  padding: 15px;
+  margin-top: 20px;
 }
 
 .basketball-team__header {
-  position: absolute;
-  top: -10%;
   padding-left: 45px;
+  margin-top: -60px;
 }
 
 .basketball-team__header h3 {
@@ -1683,12 +1698,11 @@ button {
 
 .we__container {
   color: #fff;
-  padding: 0px;
-  padding-bottom: 100px;
+  padding: 0px 0px 60px 0px;
 }
 
 .we__body {
-  padding: 20px;
+  padding: 20px 20px 0px 20px;
 }
 
 .we__content {
@@ -1854,7 +1868,7 @@ button {
 }
 
 .we-trainer {
-  margin: 20px 0px;
+  padding: 20px 0px 0px 0px;
 }
 
 .we-trainer__row {
@@ -2171,12 +2185,12 @@ button {
   margin: 0 20px;
 }
 
-.team__body .basketball-team-gallery {
-  margin-top: 100px;
+.team__body .we-trainer {
+  padding-bottom: 60px;
 }
 
-.team__body .we-trainer {
-  padding-left: 20px;
+.team__body .basketball-team-gallery {
+  margin: 0px -20px;
 }
 
 .team__body .we__title {
@@ -2205,7 +2219,7 @@ button {
 }
 
 @media screen and (max-width: 991px) {
-  [class*=__container] {
+  [class*=__container].topPad {
     /* стили для больших планшетов - начало */
     padding-top: 69px;
     padding-bottom: 10px;
@@ -2352,6 +2366,11 @@ button {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 auto;
             flex: 1 1 auto;
+  }
+
+  .footer__container {
+    /* стили для больших планшетов - начало */
+    padding: 20px;
   }
 }
 
@@ -2555,10 +2574,6 @@ button {
     /* стили для средних планшетов - начало */
   }
 
-  .team__body .we-trainer {
-    padding: 0px 20px;
-  }
-
   .team__body .we-trainer__row-text {
     padding: 0px;
   }
@@ -2684,7 +2699,7 @@ button {
 
   .about__title {
     /* стили для телефонов - начало */
-    margin: 20px 0px 0px 0px;
+    margin: 10px 0px -6% 0px;
     font-size: 28px;
   }
 
@@ -2729,11 +2744,7 @@ button {
   }
 
   .basketball-team__header {
-    /* стили для телефонов - начало */
-    top: -10%;
     padding-left: 0px;
-    /*width: 100%;
-    text-align: center;*/
   }
 
   .card-text__name {
@@ -2753,9 +2764,13 @@ button {
     padding: 130px 0px;
   }
 
+  .we-trainer {
+    /* стили для телефонов - начало */
+    padding: 20px 0px 30px 0px;
+  }
+
   .team__body .basketball-team-gallery {
     /* стили для телефонов - начало */
-    margin-top: 50px;
   }
 }
 
@@ -2775,7 +2790,6 @@ button {
 
   .team__body .basketball-team-gallery {
     /* стили для телефонов - начало */
-    margin-top: 0px;
   }
 
   .team__body .basketball-team-gallery .basketball-team__header h3 {
