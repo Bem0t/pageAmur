@@ -374,6 +374,7 @@ body {
 .popup__map iframe {
   margin: 0px auto;
   display: none;
+  min-width: 800px;
 }
 
 .popup__close {
@@ -510,14 +511,13 @@ body.lock {
   min-height: 100%;
 }
 
-.about-column__next-game {
+.about-column {
   padding: 20px;
   background: rgba(0, 0, 0, 0.4);
   border-radius: 10px;
 }
 
 .about-column__last-game {
-  padding: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1146,6 +1146,10 @@ body.lock {
 .contacts__content .popup__map img {
   max-width: 90%;
   text-align: center;
+}
+
+.contacts__content .popup__map iframe {
+  display: block;
 }
 
 .contacts__title {
