@@ -1145,6 +1145,7 @@ body.lock {
 
 .contacts__content .popup__map img {
   max-width: 90%;
+  text-align: center;
 }
 
 .contacts__title {
@@ -1459,6 +1460,8 @@ body.lock {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .slick-dots li {
@@ -2160,6 +2163,16 @@ button {
           flex: 1 1 auto;
   padding: 10px;
   width: 300px;
+}
+
+.media-row__img source {
+  height: 100%;
+  cursor: -webkit-zoom-in;
+  cursor: zoom-in;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  border-radius: 10px;
 }
 
 .media-row__img img {
